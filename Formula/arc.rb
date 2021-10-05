@@ -5,24 +5,24 @@
 class Arc < Formula
   desc "A helpful CircleCI and GitHub tool."
   homepage "https://github.com/hubci/arc"
-  version "0.1.1"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/hubci/arc/releases/download/v0.1.1/arc-v0.1.1-macos-amd64.tar.gz"
-    sha256 "6dcf224cb7057d4f3c9e56a1efb7b5cf573e9b53b9fe6a538189fea0a8da56f5"
+    url "https://github.com/hubci/arc/releases/download/v0.2.0/arc-v0.2.0-macos-amd64.tar.gz"
+    sha256 "7710897c9b814e480e5d1a6f784a9d6db2f3eb41249799c368872fe7e1215e24"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/hubci/arc/releases/download/v0.1.1/arc-v0.1.1-macos-arm64.tar.gz"
-    sha256 "9ee53b84deed8f344de0bc564f3b67c55221d547b94cff374add50a918f2969e"
+    url "https://github.com/hubci/arc/releases/download/v0.2.0/arc-v0.2.0-macos-arm64.tar.gz"
+    sha256 "a9657f73642f0f418b1a69a7f027444e011a1ed420a0c66e14c24c795a3698e3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/hubci/arc/releases/download/v0.1.1/arc-v0.1.1-linux-amd64.tar.gz"
-    sha256 "757782e84e94379440fb6b6b385116a03fd35ef89dfdc4f68e6426e2ee847e7e"
+    url "https://github.com/hubci/arc/releases/download/v0.2.0/arc-v0.2.0-linux-amd64.tar.gz"
+    sha256 "ec1a93485dbda9fe3e30cc7ebda0010f4cb8568a0b3fb7c742927316b1847946"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/hubci/arc/releases/download/v0.1.1/arc-v0.1.1-linux-arm64.tar.gz"
-    sha256 "a3117474791fd15f9402131e7995f1e6b70f73173790c41f2b2b2e6c06ce771e"
+    url "https://github.com/hubci/arc/releases/download/v0.2.0/arc-v0.2.0-linux-arm64.tar.gz"
+    sha256 "2ef5925489567e7303c14fbe7aeab6eebfbcdb70b2788b3f05a5174448f68031"
   end
 
   def install
