@@ -10,7 +10,7 @@ class Arc < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/hubci/arc/releases/download/v0.4.1/arc-v0.4.1-macos-arm64.tar.gz"
-      sha256 "4ade044f1aed21985b7bdcfd320030d5e161fc339b3ad014806f4f4f23ec27de"
+      sha256 "bc19beca7709aacd1de31a95b8332b29a42cbb74494c893005de380421cd9924"
 
       def install
         bin.install "arc"
@@ -18,7 +18,7 @@ class Arc < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/hubci/arc/releases/download/v0.4.1/arc-v0.4.1-macos-amd64.tar.gz"
-      sha256 "6e4d76255e805f8b37b96489498c31a8329674d74e08c37319d3e73456eb1558"
+      sha256 "065efc2d12425142c2c743c191e20132f0334f3d75d9af7409d2bd5b2aaa1d51"
 
       def install
         bin.install "arc"
@@ -29,7 +29,7 @@ class Arc < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/hubci/arc/releases/download/v0.4.1/arc-v0.4.1-linux-arm64.tar.gz"
-      sha256 "96413fbd2c7e1ba363da32329ce6d60bcdf0bb3653705c7fdd73f09d218957cd"
+      sha256 "4fcb739fc355559224dbda763638c5b750957f7d3a33703929cd68ee3108d3c3"
 
       def install
         bin.install "arc"
@@ -37,7 +37,7 @@ class Arc < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/hubci/arc/releases/download/v0.4.1/arc-v0.4.1-linux-amd64.tar.gz"
-      sha256 "3bc4f5df6f7dc971c07e118502dc42e24b1e393e6a397dac8b0c1ee8801f5885"
+      sha256 "899b9196a44c956ee648ea2514c001e082a86365ddd7848e7f783925ea87579f"
 
       def install
         bin.install "arc"
