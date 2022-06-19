@@ -5,20 +5,20 @@
 class Arc < Formula
   desc "A helpful CircleCI and GitHub tool."
   homepage "https://github.com/hubci/arc"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/hubci/arc/releases/download/v0.5.0/arc-v0.5.0-macos-arm64.tar.gz"
-      sha256 "c3d5a24005ef231c01fdcce875aa9d94122f50bf8d7b3daf23e6a3028c0a3d8f"
+      url "https://github.com/hubci/arc/releases/download/v0.5.1/arc-v0.5.1-macos-arm64.tar.gz"
+      sha256 "80df06606d71b8ffa29b8fb4f169f2e72e4eb493a475d48fa9b24ff6d3db6df5"
 
       def install
         bin.install "arc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hubci/arc/releases/download/v0.5.0/arc-v0.5.0-macos-amd64.tar.gz"
-      sha256 "ab6436302e0f2b5f8af6ebbc4aae8bb6ee43b1b577fe0140d6a55424727247b8"
+      url "https://github.com/hubci/arc/releases/download/v0.5.1/arc-v0.5.1-macos-amd64.tar.gz"
+      sha256 "07e1626b641999e8bd0fd0e6a1fd7df6ada75e443c87098e46667b1821162af1"
 
       def install
         bin.install "arc"
@@ -28,16 +28,16 @@ class Arc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hubci/arc/releases/download/v0.5.0/arc-v0.5.0-linux-arm64.tar.gz"
-      sha256 "01e0a448ad9919fcaa3b1bce3d4ffc3572f8873cf96dd13339bc768ebe8f90c6"
+      url "https://github.com/hubci/arc/releases/download/v0.5.1/arc-v0.5.1-linux-arm64.tar.gz"
+      sha256 "8d69d4a277a720355a1c954e4a7d042f905a97c3f5a3a21c8ca27a6fe7f86a9e"
 
       def install
         bin.install "arc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hubci/arc/releases/download/v0.5.0/arc-v0.5.0-linux-amd64.tar.gz"
-      sha256 "8e8893b60933def005806681bd88954c9b92ce0faea933d5f4dda39cf825d122"
+      url "https://github.com/hubci/arc/releases/download/v0.5.1/arc-v0.5.1-linux-amd64.tar.gz"
+      sha256 "2d4370915d206b5dd8d4b4a414d29775598ab77cab331e40343bb3483575151c"
 
       def install
         bin.install "arc"
