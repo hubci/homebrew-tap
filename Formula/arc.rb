@@ -5,42 +5,54 @@
 class Arc < Formula
   desc "A helpful CircleCI and GitHub tool."
   homepage "https://github.com/hubci/arc"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/hubci/arc/releases/download/v0.7.0/arc-v0.7.0-macos-arm64.tar.gz"
-      sha256 "e67ae328a478d13c0f314cad6bd0d124487f8129f5a75efa06adbee6ad12cd1a"
+      url "https://github.com/hubci/arc/releases/download/v0.8.0/arc-v0.8.0-macos-arm64.tar.gz"
+      sha256 "863bdc18ea07d8d893ae1eb4a5d99b521a3db434c4790234aba35cc76622d279"
 
       def install
         bin.install "arc"
+        bash_completion.install "completions/arc.bash" => "arc"
+        fish_completion.install "completions/arc.fish"
+        zsh_completion.install "completions/arc.zsh" => "_arc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hubci/arc/releases/download/v0.7.0/arc-v0.7.0-macos-amd64.tar.gz"
-      sha256 "00ea9fa6bf6f762e684a38891602902bfb7ab62139ae7381f83e9d1cc5168aaa"
+      url "https://github.com/hubci/arc/releases/download/v0.8.0/arc-v0.8.0-macos-amd64.tar.gz"
+      sha256 "8307b31a5ecb81b077306789f824a1b21386ac59f011b506ab7c1f3d2e49eb76"
 
       def install
         bin.install "arc"
+        bash_completion.install "completions/arc.bash" => "arc"
+        fish_completion.install "completions/arc.fish"
+        zsh_completion.install "completions/arc.zsh" => "_arc"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hubci/arc/releases/download/v0.7.0/arc-v0.7.0-linux-arm64.tar.gz"
-      sha256 "39fbec3813d3c68aae3935c82f6df04964b9e3a457b1356842bf6a97c65c47b5"
+      url "https://github.com/hubci/arc/releases/download/v0.8.0/arc-v0.8.0-linux-arm64.tar.gz"
+      sha256 "953f0bc230e0fe750dacfadc43798c383ebc2bf265dd6ea38cd9330dae74ce29"
 
       def install
         bin.install "arc"
+        bash_completion.install "completions/arc.bash" => "arc"
+        fish_completion.install "completions/arc.fish"
+        zsh_completion.install "completions/arc.zsh" => "_arc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hubci/arc/releases/download/v0.7.0/arc-v0.7.0-linux-amd64.tar.gz"
-      sha256 "c047c3a5b4ce0ddd9d18039470738e2390ab8156a76f28934c73469c816ed999"
+      url "https://github.com/hubci/arc/releases/download/v0.8.0/arc-v0.8.0-linux-amd64.tar.gz"
+      sha256 "ccc9222fe9720a71312baa7e9f2b63885569984a6cb1daf0b4201e89aed95320"
 
       def install
         bin.install "arc"
+        bash_completion.install "completions/arc.bash" => "arc"
+        fish_completion.install "completions/arc.fish"
+        zsh_completion.install "completions/arc.zsh" => "_arc"
       end
     end
   end
