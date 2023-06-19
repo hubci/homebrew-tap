@@ -5,12 +5,12 @@
 class Arc < Formula
   desc "A helpful CircleCI and GitHub tool."
   homepage "https://github.com/hubci/arc"
-  version "0.11.0"
+  version "0.11.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/hubci/arc/releases/download/v0.11.0/arc-v0.11.0-macos-amd64.tar.gz"
-      sha256 "0c62e2c22babc5269853b50d8c6b8fa98ba5f7f7b0f8f79e32cd56cc107f6d88"
+    if Hardware::CPU.arm?
+      url "https://github.com/hubci/arc/releases/download/v0.11.1/arc-v0.11.1-macos-arm64.tar.gz"
+      sha256 "4b49ba3448a86928ebafff58f1c12d756ecfee7877a4716a697a8d51e50376c6"
 
       def install
         bin.install "arc"
@@ -19,9 +19,9 @@ class Arc < Formula
         zsh_completion.install "completions/arc.zsh" => "_arc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/hubci/arc/releases/download/v0.11.0/arc-v0.11.0-macos-arm64.tar.gz"
-      sha256 "2885d28e05c396542e47d900bec98c5db3e78e1b154cc90813ae99182ab75634"
+    if Hardware::CPU.intel?
+      url "https://github.com/hubci/arc/releases/download/v0.11.1/arc-v0.11.1-macos-amd64.tar.gz"
+      sha256 "c347ceba693c80c328e9aa15ef7550c7d35f94aaa9d16c2b85dc4ac88c8877fe"
 
       def install
         bin.install "arc"
@@ -33,9 +33,9 @@ class Arc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hubci/arc/releases/download/v0.11.0/arc-v0.11.0-linux-arm64.tar.gz"
-      sha256 "7193daf5a82907793a26208335ee34a54939b42ffb3b6bf0deae520f3b559b1c"
+    if Hardware::CPU.intel?
+      url "https://github.com/hubci/arc/releases/download/v0.11.1/arc-v0.11.1-linux-amd64.tar.gz"
+      sha256 "9cdecb02603532ed3673e76cad7c861116698abe3d13088fe5d9e00dcab2be18"
 
       def install
         bin.install "arc"
@@ -44,9 +44,9 @@ class Arc < Formula
         zsh_completion.install "completions/arc.zsh" => "_arc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/hubci/arc/releases/download/v0.11.0/arc-v0.11.0-linux-amd64.tar.gz"
-      sha256 "fd603ae7b78a3c1e711b34d952c9dba18151343f6f3b7f1215d20b4634afe7d8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/hubci/arc/releases/download/v0.11.1/arc-v0.11.1-linux-arm64.tar.gz"
+      sha256 "794f085707fe87eaecb93cd59f82292ff3a5e7e800c7147633ff0606ba1dbf78"
 
       def install
         bin.install "arc"
