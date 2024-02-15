@@ -5,12 +5,12 @@
 class Arc < Formula
   desc "A helpful CircleCI and GitHub tool."
   homepage "https://github.com/hubci/arc"
-  version "0.11.3"
+  version "0.11.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hubci/arc/releases/download/v0.11.3/arc-v0.11.3-macos-amd64.tar.gz"
-      sha256 "ab460567104c4f187ec3c22f7bd1015a76c8a54085681e6916144324a4bc946b"
+      url "https://github.com/hubci/arc/releases/download/v0.11.4/arc-v0.11.4-macos-amd64.tar.gz"
+      sha256 "be3e9e5225678d0756c43ced447c14dc29761aa4f62316dd96f5465ba631cb56"
 
       def install
         bin.install "arc"
@@ -20,8 +20,8 @@ class Arc < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hubci/arc/releases/download/v0.11.3/arc-v0.11.3-macos-arm64.tar.gz"
-      sha256 "2ce4de5955709fa443f02f29bb5557cd9d2a315a477c1e3b07946f723ec28ae9"
+      url "https://github.com/hubci/arc/releases/download/v0.11.4/arc-v0.11.4-macos-arm64.tar.gz"
+      sha256 "c6e93c171a7af85924a6d02c8275a3333e59c080465c2e9b02a1fadbdc4b63db"
 
       def install
         bin.install "arc"
@@ -34,8 +34,8 @@ class Arc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/hubci/arc/releases/download/v0.11.3/arc-v0.11.3-linux-amd64.tar.gz"
-      sha256 "60a249e03a7640ee69cda3b57cad3ecec836c94e045f2656be5defc85685950f"
+      url "https://github.com/hubci/arc/releases/download/v0.11.4/arc-v0.11.4-linux-amd64.tar.gz"
+      sha256 "fe6d6026c8ea5dfec9bbd4369eeb51e0f113911c970d220562084b7be775c003"
 
       def install
         bin.install "arc"
@@ -45,8 +45,8 @@ class Arc < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hubci/arc/releases/download/v0.11.3/arc-v0.11.3-linux-arm64.tar.gz"
-      sha256 "3123508db1ca3adec7e8e0da6f81d6b603acf0a97fd5864860543383f6cd1eb3"
+      url "https://github.com/hubci/arc/releases/download/v0.11.4/arc-v0.11.4-linux-arm64.tar.gz"
+      sha256 "0395122f7db4b0a349f211cec942dbea231f64ed10a47513ba78acfe9245fba8"
 
       def install
         bin.install "arc"
